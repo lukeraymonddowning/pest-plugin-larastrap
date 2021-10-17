@@ -18,3 +18,7 @@ it('allows datasets to use Laravel features', function (\Illuminate\Routing\Rout
 dataset('all routes', function () {
     return Route::getRoutes()->getRoutesByName();
 });
+
+it ('allows shared datasets to use Laravel features', function (string $provider) {
+    expect(class_exists($provider))->toBeTrue();
+})->with('laravel providers');
