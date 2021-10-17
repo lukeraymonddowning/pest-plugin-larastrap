@@ -32,7 +32,7 @@
     "extra": {
         "pest": {
             "plugins": [
-                "Lukeraymonddowning\\Larastrap"
+                "Lukeraymonddowning\\Larastrap\\Plugin"
             ]
         },
         "branch-alias": {
