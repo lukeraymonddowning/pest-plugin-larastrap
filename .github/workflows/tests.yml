@@ -28,8 +28,13 @@ jobs:
         echo "::add-matcher::${{ runner.tool_cache }}/php.json"
         echo "::add-matcher::${{ runner.tool_cache }}/phpunit.json"
 
-    - name: Install PHP dependencies
-      run: cd testapp && composer update --no-interaction --no-progress --ansi
+    - name: Prepare test application
+      run: |
+        cd testapp
+        composer update --no-interaction --no-progress --ansi
+        cp .env.example .env
+        php artisan key:generate
+
 
     - name: Unit Tests
       run: cd testapp && php artisan test
