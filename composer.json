@@ -1,5 +1,5 @@
 {
-    "name": "pestphp/pest-plugin-template",
+    "name": "lukeraymonddowning/pest-plugin-larastrap",
     "description": "My awesome plugin",
     "keywords": [
         "php",
@@ -13,21 +13,28 @@
     "license": "MIT",
     "require": {
         "php": "^7.3 || ^8.0",
-        "pestphp/pest": "^1.0",
         "pestphp/pest-plugin": "^1.0"
     },
     "autoload": {
         "psr-4": {
-            "Pest\\PluginName\\": "src/"
+            "Lukeraymonddowning\\Larastrap\\": "src/"
         },
         "files": [
             "src/Autoload.php"
         ]
     },
     "require-dev": {
+        "laravel/framework": "^8.64",
+        "orchestra/testbench": "^6.21",
+        "pestphp/pest": "^1.20",
         "pestphp/pest-dev-tools": "dev-master"
     },
     "extra": {
+        "pest": {
+            "plugins": [
+                "Lukeraymonddowning\\Larastrap"
+            ]
+        },
         "branch-alias": {
             "dev-master": "1.x-dev"
         }
@@ -42,11 +49,9 @@
         "lint": "php-cs-fixer fix -v",
         "test:lint": "php-cs-fixer fix -v --dry-run",
         "test:types": "phpstan analyse --ansi",
-        "test:unit": "pest --colors=always",
         "test": [
             "@test:lint",
-            "@test:types",
-            "@test:unit"
+            "@test:types"
         ]
     }
 }
