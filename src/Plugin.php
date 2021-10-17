@@ -15,7 +15,7 @@ final class Plugin implements HandlesArguments
 {
     public function handleArguments(array $arguments): array
     {
-        if (!class_exists(CreatesApplication::class)) {
+        if (!trait_exists(CreatesApplication::class)) {
             throw new BadMethodCallException('You must have a Tests\\CreatesApplication trait available in your Laravel project to use the Larastrap plugin.');
         }
 
