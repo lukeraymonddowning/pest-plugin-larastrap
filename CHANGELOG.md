@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Increased `pestphp/pest` requirement from ^1.20 to ^2.0
 - Increased `pest-dev-tools` requirement from `dev-master` to ^2.0
 - Increased `pestphp/pest-plugin` requirement from ^1.0 to ^2.0
+- Updated requirement for php version to `8.1` and `8.2`
 
 ### Removed
 
