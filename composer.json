@@ -12,8 +12,8 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^7.4 || ^8.0 || ^8.1",
-        "pestphp/pest-plugin": "^1.0"
+        "php": "^8.1 || ^8.2",
+        "pestphp/pest-plugin": "^2.0"
     },
     "autoload": {
         "psr-4": {
@@ -21,10 +21,11 @@
         }
     },
     "require-dev": {
-        "laravel/framework": "^8.64",
-        "orchestra/testbench": "^6.21",
-        "pestphp/pest": "^1.20",
-        "pestphp/pest-dev-tools": "dev-master"
+        "friendsofphp/php-cs-fixer": "^3.15",
+        "laravel/framework": "^10.0",
+        "orchestra/testbench": "^8.0",
+        "pestphp/pest": "^2.0",
+        "pestphp/pest-dev-tools": "^2.0"
     },
     "extra": {
         "pest": {
@@ -40,7 +41,10 @@
     "prefer-stable": true,
     "config": {
         "sort-packages": true,
-        "preferred-install": "dist"
+        "preferred-install": "dist",
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
     },
     "scripts": {
         "lint": "php-cs-fixer fix -v",
