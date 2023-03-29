@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [v0.3.0](https://github.com/lukeraymonddowning/pest-plugin-larastrap/releases/tag/v0.3.0)
+
 ### Added
 
 - Added dependency `friendsofphp/php-cs-fixer` in composer.jon
